@@ -1,15 +1,4 @@
 
-<div class="container container-all">
-  <h1 class="first-header">Try to guess my favorite 25 Beatles songs</h1>
-  <h1 class="second-header">Enter a song title:</h1>
-  <div class="container container-search">
-    <%= form_for :song, url: {action: "search"} do |f| %>
-      <%= f.text_field :title %>
-      <%= f.submit "Enter" %>
-    <% end %>
-  </div>
-</div>
-
 .container.container-all
   %h1.first-header Try to guess my favorite 25 Beatles songs
   %h1.second-header Enter a song title:
