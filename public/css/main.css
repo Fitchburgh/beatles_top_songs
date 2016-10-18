@@ -45,3 +45,7 @@ p {
   text-align: center;
   padding-top: 1%;
 }
+
+.container-answer {
+  width: 300px;
+}
