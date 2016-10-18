@@ -5,8 +5,11 @@ class SongsController < ApplicationController
   def search
     @song = Song.find_by(song_params)
 
-    session[:guessed_songs] = @song.title
+    unless session.key? :guessed_songs
+      session[:guessed_songs] = []
+    end
 
+    session[:guessed_songs] << @song.title if !@song.nil?
   end
 
   def song_params
