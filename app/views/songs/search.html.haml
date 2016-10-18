@@ -1,0 +1,47 @@
+
+<div class="container container-all">
+  <h1 class="first-header">Try to guess my favorite 25 Beatles songs</h1>
+  <h1 class="second-header">Enter a song title:</h1>
+  <div class="container container-search">
+    <%= form_for :song, url: {action: "search"} do |f| %>
+      <%= f.text_field :title %>
+      <%= f.submit "Enter" %>
+    <% end %>
+  </div>
+  <div class="container container-all">
+    <% if @song.nil? %>
+      <p class="user-answer">
+        Songs:
+      </p>
+    <% else %>
+      <p class="user-answer">
+        Songs:
+        <p class="answer">
+          <% session[:guessed_songs].each do |song| %>
+            <p><%= song %>
+          <% end %>
+        </p>
+      </p>
+    <% end %>
+  </div>
+</div>
+
+
+.container.container-all
+  %h1.first-header Try to guess my favorite 25 Beatles songs
+  %h1.second-header Enter a song title:
+  .container.container-search
+    = form_for :song, url: {action: "search"} do |f|
+      = f.text_field :title
+      = f.submit "Enter"
+  .container.container-all
+    - if @song.nil?
+      %p.user-answer
+        Songs:
+    - else
+      %p.user-answer
+        Songs:
+      %p.answer
+        - session[:guessed_songs].each do |song|
+          %p
+            = song
