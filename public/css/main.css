@@ -49,3 +49,20 @@ p {
 .container-answer {
   width: 300px;
 }
+
+.container-login {
+  text-align: center;
+  padding-top: 20%;
+  padding-bottom: 5%;
+  font-family: sans-serif;
+  font-size: 22px;
+}
+
+.user-prompts {
+  float: right;
+  padding-right: 5%;
+  padding-top: 2%;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 18px;
+}
