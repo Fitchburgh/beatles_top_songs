@@ -1,7 +1,7 @@
 .login
-  .container
+  .container.container-signup
     .form
-      %h1 Sign up
+      %h1 Sign Up
       = form_for(@user) do |f|
         = f.text_field :first_name, :placeholder => "First name"
         = f.text_field :last_name, :placeholder => "Last name"

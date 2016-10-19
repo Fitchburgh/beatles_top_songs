@@ -50,7 +50,7 @@ p {
   width: 300px;
 }
 
-.container-login {
+.container-login, .container-signup {
   text-align: center;
   padding-top: 20%;
   padding-bottom: 5%;
