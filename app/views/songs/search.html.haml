@@ -9,7 +9,7 @@
   .container.container-answer
     - if @song.nil?
       %p.user-answer
-        Nope. Try again
+        Nope. Try again.
         Current guesses:
         %ol.answer
           - session[:guessed_songs].each do |song|
