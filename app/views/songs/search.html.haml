@@ -11,9 +11,9 @@
       %p.user-answer
         Nope. Try again
         Current guesses:
-        %p.answer
+        %ol.answer
           - session[:guessed_songs].each do |song|
-            %p
+            %li
               = song
     - else
       %p.user-answer
